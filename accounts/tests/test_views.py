@@ -40,4 +40,5 @@ class TestView(TestCase):
 		self.client.login(username='jack', password='jackpass')
 		response = self.client.get(reverse('accounts:dashboard', args=['jack',]))
 		self.assertEqual(response.status_code, 200)
-		self.assertTemplateUsed(response, 'accounts/dashbord.html')
+		self.assertTemplateUsed(response, 'accounts/dashbo
+		rd.html')
