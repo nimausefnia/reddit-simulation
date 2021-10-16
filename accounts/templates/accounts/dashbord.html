@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+   <h3 class="text-center">{{user.username}}</h3>
+   <img class="rounded mx-auto d-block" src="{{ user.profile.image.url}}" alt="" width="200" height="180">
+   <form action="" method="post" enctype="multipart/form-data">
+   {% csrf_token %}
+   {{form.as_p}}
+   <input type="submit" value="upload">
+   </form>
+
+{% endblock %}
